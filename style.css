@@ -97,8 +97,10 @@ header{
 
 /* ABOUT US */
 .about-section{
-    display: block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 6rem 0rem 2rem;
 }
 
 .about-section h3{
@@ -110,13 +112,50 @@ header{
 }
 
 .about-section p{
-    width: 700px;
+    width: 650px;
+    text-align: left;
     line-height: 25px;
     font-size: 20px;
     display: block;
     margin: 0 auto;
 }
 
+.about-section img{
+    width: 450px;
+}
+
+.why-text a{
+    color: #ef233c;
+}
+
+.why-text .learn{
+    text-align: center;
+    margin: 15px 0 0 0;
+    font-size: 20px; 
+}
+
+/* WHY SECTION */
+.why-section{
+    padding: 3px 6rem 1rem 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.why-sect{
+    width: 700px;
+    padding: 20px ;
+    background-color: #ef233c;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-section img{
+    width: 600px;
+}
 
 /***********************************************************SHOP PAGE */
 
