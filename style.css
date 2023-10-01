@@ -5,7 +5,34 @@
     font-family: 'Urbanist', sans-serif;
 }
 
-/* PRIVACY PAGE */
+/* HEADER SECTION */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 3rem ;
+    color: #ef233c ;
+    background-color: #fff ;
+}
+
+.navLinks{
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    padding: 5px 0 0 0;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: #ef233c ;
+    font-weight: 600;
+}
+
+#cart{
+    color: #ef233c ;
+    font-size: 20px;
+}
+
+/******************************************************* PRIVACY PAGE */
 .privacyContainer{
     margin: 1rem 4rem 2rem 1rem;
     line-height: 25px;
@@ -27,3 +54,49 @@
     padding: 12px 0 5px 0;
 }
 
+/* *********************************************************HOME PAGE */
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 6rem 1rem 3rem;
+}
+
+.hero-section img{
+    width: 500px;
+}
+
+.hero-section p{
+    width: 570px;
+    font-size: 20px;
+}
+
+.hero-section h2{
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+}
+
+.hero-section button{
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    width: 150px;
+    padding: 12px 20px;
+    border-radius: 10px 0 10px 0;
+    margin: 2rem 0 0 0;
+}
+
+.hero-section span{
+    color: #ef233c;
+}
+
+/***********************************************************SHOP PAGE */
+
+
+
+/* .shopContainer
+
+
+.shopContainer
+
+.shopContainer */
