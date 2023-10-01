@@ -105,7 +105,7 @@ header{
 
 .about-section h3{
     font-size: 3rem;
-    color:  #ef233c;
+    /* color:  #ef233c; */
     margin: 0 auto 1rem auto;
     display: block;
     width: 250px;
@@ -124,11 +124,11 @@ header{
     width: 450px;
 }
 
-.why-text a{
+.about-text a{
     color: #ef233c;
 }
 
-.why-text .learn{
+.about-text .learn{
     text-align: center;
     margin: 15px 0 0 0;
     font-size: 20px; 
@@ -137,25 +137,83 @@ header{
 /* WHY SECTION */
 .why-section{
     padding: 3px 6rem 1rem 2rem;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
 }
 
-.why-sect{
-    width: 700px;
-    padding: 20px ;
+.why-sect {
+    margin: 1rem 13rem 0 11rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    font-size: 20px; 
+    align-items: center;
+    text-align: left;
+}
+
+.why-section h2{
+    width: 280px;
+    font-size: 3rem;
+    margin: 10px auto 2rem auto;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+
+.why-section span{
+    color: #ef233c;
+}
+
+.why-sect p{
+    margin: 10px 0 0 0;
+}
+
+.why-sect i{
+    font-weight: 800;
+    font-size: 1.9rem;
+    color: #ef233c;
+}
+
+.one, .two, .three, .four{
+    width: 600px;
+    height: 120px;
+    padding: 16px 12px;
+    font-size: 1rem;
+    border: 3px solid #000;
+    border-radius: 10px 0 10px 0;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000;
+}
+
+#three{
+    margin: 0 0 2px 0;
+}
+
+/* FOOTER */
+footer{
+    margin: 1rem 0 0 0;
+    padding: 1rem 6rem 1rem 2rem;
     background-color: #ef233c;
     color: #fff;
-    font-size: 16px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.why-section img{
-    width: 600px;
+.pages a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
 }
+
+.social-icons a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.social-icons, .pages{
+    display: flex;
+    gap: 1.4rem;
+}
+
 
 /***********************************************************SHOP PAGE */
 
