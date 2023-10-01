@@ -33,8 +33,36 @@ header{
 }
 
 /******************************************************* PRIVACY PAGE */
-.privacyContainer{
-    margin: 1rem 4rem 2rem 1rem;
+/* HEADER SECTION */
+.privacyContainer header{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 5rem  14px 1rem;
+    background-color: #ef233c ;
+    color: #fff ;
+}
+
+.privacyContainer .navLinks{
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    padding: 5px 0 0 0;
+}
+
+.privacyContainer .navLinks a{
+    text-decoration: none;
+    color: #fff ;
+    font-weight: 600;
+}
+
+.privacyContainer #cart{
+    color: #fff ;
+    font-size: 20px;
+}
+
+/* body */
+.privacyContainer main{
+    padding: 1rem 3rem 2rem 1rem;
     line-height: 25px;
 }
 
@@ -100,13 +128,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 13px 6rem 0rem 2rem;
+    padding: 0 6rem 0rem 2rem;
 }
 
 .about-section h3{
     font-size: 3rem;
-    /* color:  #ef233c; */
-    margin: 0 auto 1rem auto;
+    margin: 0 0 1rem 0;
     display: block;
     width: 250px;
 }
@@ -128,15 +155,20 @@ header{
     color: #ef233c;
 }
 
-.about-text .learn{
-    text-align: center;
-    margin: 15px 0 0 0;
-    font-size: 20px; 
+.about-text button{
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    width: 150px;
+    padding: 12px 20px;
+    border-radius: 10px 0 10px 0;
+    display: block;
+    margin: 2rem 0 0 0;
 }
 
 /* WHY SECTION */
 .why-section{
-    padding: 3px 6rem 1rem 2rem;
+    padding: 3rem 6rem 4rem 2rem;
 }
 
 .why-sect {
@@ -184,6 +216,111 @@ header{
 
 #three{
     margin: 0 0 2px 0;
+}
+
+/* PRODUCT PAGE */
+.product-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 3rem 1rem 3rem;
+}
+
+.product-section img{
+    width: 600px;
+}
+
+.product-text{
+    margin: 4rem 0 0 0;
+}
+
+.product-text h2{
+    font-size: 2.5rem;
+    margin: 1.7rem 0 0 0;
+}
+
+.product-text p{
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+
+.product-text button{
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    width: 150px;
+    padding: 12px 20px;
+    border-radius: 10px 0 10px 0;
+    margin: 2rem 0 0 0;
+    font-size: 18px;
+}
+
+/* CONTACT */
+.contact-section{
+    margin: 2rem 3rem 1rem 3rem;
+    text-align: center;
+}
+
+.contact-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-section h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+.contact-section form{
+    width: 450px;
+    display: block;
+    margin: 2rem auto;
+}
+
+.contact-section input, textarea{
+    width: 100%;
+    padding: 7px 0 7px 7px ;
+}
+
+.contact-section img{
+    width: 450px;
+}
+
+::placeholder{
+    font-size: 18px;
+}
+
+input[type=button] {
+  background-color: #ef233c;
+  color: white;
+  border: none;
+}
+
+/* CONTACT INFO SECTION */
+.contact-info-section{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 2rem 12rem 1rem 12rem;
+    padding: 20px ;
+}
+
+.contact-info-section h2{
+    font-size: 2rem;
+    margin: 7rem 0 12px 0;
+}
+
+.contact-info-section p{
+    font-size: 18px;
+}
+
+.contact-info-section span{
+    color: #ef233c;
+}
+
+.contact-info-section img{
+    width: 350px;
 }
 
 /* FOOTER */
