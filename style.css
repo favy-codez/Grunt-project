@@ -351,10 +351,84 @@ footer{
     gap: 1.4rem;
 }
 
-
 /***********************************************************SHOP PAGE */
+/* HERO SECTION */
+.products-hero-section{
+    display: flex;
+    padding: 0 6rem 1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.products-hero-section span{
+    color: #ef233c
+}
 
+.products-hero-section button{
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    width: 150px;
+    padding: 12px 20px;
+    border-radius: 10px 0 10px 0;
+    display: block;
+    margin: 1.5rem 0 0 0;
+    font-size: 15px;
+}
+
+.products-hero-section img{
+    width: 500px;
+}
+
+.products-hero-section h1{
+    font-size: 3rem;
+    margin: 5px 0;
+}
+
+.products-hero-section h3{
+    font-size: 1.6rem;
+}
+
+.products-hero-section a{
+    text-decoration: none;
+}
+
+/* PRODUCT CATLOGUE */
+.ourproductsSection{
+    margin: 0 0 2rem 0;
+}
+
+.ourproductsSection h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin: 0 0 1rem 0;
+}
+
+#cart{
+    font-size: 40px;
+}
+
+header .iconCart{
+    position: relative;
+    z-index: 1;
+}
+
+header .totalQuantity{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    background-color: #b31010;
+    width: 26px;
+    height: 23px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(20px);
+}
 
 /* .shopContainer
 
