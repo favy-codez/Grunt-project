@@ -352,11 +352,38 @@ footer{
     gap: 1.4rem;
 }
 
-/***********************************************************SHOP PAGE */
-/* HERO SECTION */
+/* ! **********************************************************SHOP PAGE */
+/*?  header */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5rem  0 3rem;
+    color: #ef233c ;
+    background-color: #fff ;
+}
+
+.nav .navLinks{
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    padding: 5px 0 0 0;
+}
+
+.nav .navLinks a{
+    text-decoration: none;
+    color: #ef233c ;
+    font-weight: 600;
+}
+
+.nav #cart{
+    color: #ef233c ;
+    font-size: 20px;
+}
+
+/*? HERO SECTION */
 .products-hero-section{
     display: flex;
-    padding: 0 6rem 1rem 3rem;
+    padding: 0 6rem 0 3rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -412,7 +439,6 @@ footer{
     padding: 5px 10px;
     border-radius: 4px;
     position: relative;
-    margin: 0 0 60px 0;
 }
 
 .cartAmount{
@@ -428,11 +454,21 @@ footer{
 
 /* ! SHOP ITEMS STYLING */
 .shop{
-    padding: 0 6rem 1rem 3rem;
+    padding: 2.5rem 6rem 2.5rem 3rem;
     display: grid;
     grid-template-columns: repeat(4, 233px);
     gap: 30px;
     justify-content: center;
+}
+
+.productsSection span{
+    color: #ef233c;
+}
+
+.productTitle{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
 }
 
 .item{
