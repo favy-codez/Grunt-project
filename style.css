@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
     font-family: 'Urbanist', sans-serif;
 }
 
@@ -395,17 +396,20 @@ footer{
 
 /* PRODUCT CATLOGUE */
 .ourproductsSection{
-    margin: 0 0 2rem 0;
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto 2rem auto;
+    transition: transform 1s;
 }
 
-.ourproductsSection h2{
+.ourproductsSection h1{
     text-align: center;
-    font-size: 2.6rem;
-    margin: 0 0 1rem 0;
+    font-size: 3rem;
+    font-weight: 900;
 }
 
 #cart{
-    font-size: 40px;
+    font-size: 34px;
 }
 
 header .iconCart{
@@ -416,8 +420,8 @@ header .iconCart{
 header .totalQuantity{
     position: absolute;
     top: 0;
-    right: 0;
-    font-size: 12px;
+    right: 1;
+    font-size: 10px;
     background-color: #b31010;
     width: 26px;
     height: 23px;
@@ -428,6 +432,53 @@ header .totalQuantity{
     justify-content: center;
     align-items: center;
     transform: translate(20px);
+}
+
+.listProduct{
+    margin: 0 auto 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.listProduct img{
+    width: 100%
+}
+
+.listProduct h2{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.listProduct .item .price{
+    font-size: 15px;
+}
+
+.listProduct .item{
+    position: relative;
+    width: 300px;
+}
+
+.listProduct .item button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ef233c;
+    color: #fff;
+    width: 50%;
+    border: none;
+    padding: 20px 30px;
+    box-shadow: 0 10px 50px #000;
+    cursor: pointer;
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+}
+
+.listProduct .item:hover button{
+    transition: .5s;
+    opacity: 1;
+    transform: translateX(-50%) ;
+
 }
 
 /* .shopContainer
