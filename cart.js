@@ -29,11 +29,9 @@ let shopItemsData = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
         img: "./IMAGES/two.svg",
     },
-];
+]
 
-let basket = [{
-    
-}];
+let basket= []
 
 let generateShop = () =>{
     return (shop.innerHTML = shopItemsData.map(data =>{
@@ -45,12 +43,12 @@ let generateShop = () =>{
                 <div class="details">
                     <h3>${name}</h3>
                     <p>${desc}</p>
-                    <div id=${id} class="price-quantity">
+                    <div class="price-quantity">
                         <h2>$ ${price}</h2>
                         <div class="buttons">
-                            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                            <div class="quantity">0</div>
-                            <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                            <i onclick= "decrement(${id})" class="bi bi-dash-lg"></i>
+                            <div id=${id} class="quantity">0</div>
+                            <i onclick = "increment(${id})" class="bi bi-plus-lg"></i>
                         </div>
                     </div>
                 </div>
@@ -61,28 +59,41 @@ let generateShop = () =>{
 
 generateShop()
 
-let increment = (id) => {
-    // to select just the ID
-    let selectedItem = id;
+let increment = (id)=>{
+    let search = basket.find((x) => x.id === id);
 
-    basket.push({
-        id: selectedItem.id,
+    if (search === undefined) {
+      basket.push({
+        id: id,
         item: 1,
-    });
-
+      });
+    } else {
+      search.item += 1;
+    }
     console.log(basket);
-};
+    update(id)
+}
+let decrement = (id)=>{
+    let search = basket.find((x) => x.id === id);
 
-let decrement = (id) => {
-    // to select just the ID
-    let selectedItem = id;
-    console.log(selectedItem.id);
-};
-
-let update = () => {
-    
-};
-
+    if (search === undefined) return;
+    else if (search.item === 0) return;
+     else {
+      search.item -= 1;
+    }
+    update(id)
+}
+let update = (id)=>{
+    let search = basket.find((x) => x.id === id);
+    // console.log(search.item);
+    document.getElementById(id).innerHTML = search.item;
+    calculation()
+}
+let calculation = () => {
+    let cartIcon = document.getElementById("cartAmount");
+    cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+  };
+  
 
 // ! USING HARDCODED JS
 // let generateShop = () =>{
@@ -102,8 +113,5 @@ let update = () => {
 //                     </div>
 //                 </div>
 //             </div>
-//     `);
-// };
-
-generateShop()
-
+//     `);
+// };
