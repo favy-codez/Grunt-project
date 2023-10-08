@@ -1,35 +1,35 @@
 let shop = document.getElementById("shop");
 
-// let shopItemsData = [
-//     {
-//         id: 1,
-//         name: "Casual Shirt",
-//         price: 45,
-//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-//         img: "./IMAGES/three.svg",
-//     }, 
-//     {
-//         id: 2,
-//         name: "Office Shirt",
-//         price: 100,
-//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-//         img: "./IMAGES/four.svg",
-//     },
-//     {
-//         id: 3,
-//         name: "T Shirt",
-//         price: 25,
-//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-//         img: "./IMAGES/one.svg",
-//     },
-//     {
-//         id: 4,
-//         name: "Mens Suit",
-//         price: 300,
-//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-//         img: "./IMAGES/two.svg",
-//     },
-// ]
+let shopItemsData = [
+    {
+        id: 1,
+        name: "Casual Shirt",
+        price: 45,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "./IMAGES/three.svg",
+    }, 
+    {
+        id: 2,
+        name: "Office Shirt",
+        price: 100,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "./IMAGES/four.svg",
+    },
+    {
+        id: 3,
+        name: "T Shirt",
+        price: 25,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "./IMAGES/one.svg",
+    },
+    {
+        id: 4,
+        name: "Mens Suit",
+        price: 300,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "./IMAGES/two.svg",
+    },
+]
 
 let basket= JSON.parse(localStorage.getItem('data')) || [] ;
 
@@ -91,7 +91,7 @@ let decrement = (id)=>{
 }
 let update = (id)=>{
     let search = basket.find((x) => x.id === id);
-    // console.log(search.item);
+    console.log(search.item);
     document.getElementById(id).innerHTML = search.item;
     calculation()
 }
