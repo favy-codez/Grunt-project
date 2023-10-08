@@ -1,45 +1,46 @@
 let shop = document.getElementById("shop");
 
-let shopItemsData = [
-    {
-        id: 1,
-        name: "Casual Shirt",
-        price: 45,
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-        img: "./IMAGES/three.svg",
-    }, 
-    {
-        id: 2,
-        name: "Office Shirt",
-        price: 100,
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-        img: "./IMAGES/four.svg",
-    },
-    {
-        id: 3,
-        name: "T Shirt",
-        price: 25,
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-        img: "./IMAGES/one.svg",
-    },
-    {
-        id: 4,
-        name: "Mens Suit",
-        price: 300,
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-        img: "./IMAGES/two.svg",
-    },
-]
+// let shopItemsData = [
+//     {
+//         id: 1,
+//         name: "Casual Shirt",
+//         price: 45,
+//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+//         img: "./IMAGES/three.svg",
+//     }, 
+//     {
+//         id: 2,
+//         name: "Office Shirt",
+//         price: 100,
+//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+//         img: "./IMAGES/four.svg",
+//     },
+//     {
+//         id: 3,
+//         name: "T Shirt",
+//         price: 25,
+//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+//         img: "./IMAGES/one.svg",
+//     },
+//     {
+//         id: 4,
+//         name: "Mens Suit",
+//         price: 300,
+//         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+//         img: "./IMAGES/two.svg",
+//     },
+// ]
 
-let basket= []
+let basket= JSON.parse(localStorage.getItem('data')) || [] ;
 
 let generateShop = () =>{
     return (shop.innerHTML = shopItemsData.map(data =>{
         // using destructuring so we don't have to use data.name
         let {id, name, price, desc, img} = data;
+        let search = basket.find((x) => x.id === id) || [];
         return `
            <div id=product-id-${id} class="item">
-                <img width="200" src=${img} alt="">
+                <img width="100%" height="229px" src=${img} alt="">
                 <div class="details">
                     <h3>${name}</h3>
                     <p>${desc}</p>
@@ -47,7 +48,9 @@ let generateShop = () =>{
                         <h2>$ ${price}</h2>
                         <div class="buttons">
                             <i onclick= "decrement(${id})" class="bi bi-dash-lg"></i>
-                            <div id=${id} class="quantity">0</div>
+                            <div id=${id} class="quantity">
+                            ${search.item === undefined? 0 : search.item}
+                            </div>
                             <i onclick = "increment(${id})" class="bi bi-plus-lg"></i>
                         </div>
                     </div>
@@ -60,28 +63,31 @@ let generateShop = () =>{
 generateShop()
 
 let increment = (id)=>{
-    let search = basket.find((x) => x.id === id);
-
+    let selectedItem = id
+    let search = basket.find((x) => x.id === selectedItem.id);
     if (search === undefined) {
       basket.push({
-        id: id,
+        id: selectedItem.id,
         item: 1,
       });
     } else {
       search.item += 1;
     }
-    console.log(basket);
-    update(id)
+
+    localStorage.setItem("data", JSON.stringify(basket))
+    update(selectedItem.id)
 }
 let decrement = (id)=>{
-    let search = basket.find((x) => x.id === id);
-
+    let selectedItem = id
+    let search = basket.find((x) => x.id === selectedItem.id);
     if (search === undefined) return;
     else if (search.item === 0) return;
      else {
       search.item -= 1;
     }
-    update(id)
+    update(selectedItem.id)
+    basket= basket.filter((x)=> x.item !== 0 )
+    localStorage.setItem("data", JSON.stringify(basket))
 }
 let update = (id)=>{
     let search = basket.find((x) => x.id === id);
@@ -94,7 +100,7 @@ let calculation = () => {
     cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
   };
   
-
+calculation()
 // ! USING HARDCODED JS
 // let generateShop = () =>{
 //     return (shop.innerHTML = `
